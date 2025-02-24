@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/marketplace.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <title>Belantar</title>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__content">
+      <div class="header__logo">
+        <h1>Belantar</h1>
+      </div>
+      <div class="header__search">
+        <input type="text" id="productSearch" placeholder="Cari produk atau toko...">
+        <button onclick="searchProduct()"><i class="ri-search-line"></i></button>
+      </div>
+    </div>
+
+    <nav class="header__categories">
+      <ul>
+        <li><a href="#">Makanan</a></li>
+        <li><a href="#">Minuman</a></li>
+        <li><a href="#">Camilan</a></li>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Cosmetik</a></li>
+        <li><a href="#">Lainnya</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <!-- Countdown Timer -->
+   <div class="countdown-wrapper">
+    <div id="vanta"></div>
+    <div class="countdown-container">
+      <div class="moon"></div>
+      <h1 class="title">Bazar Online Ramadhan</h1>
+      <div class="countdown">
+        <div class="countdown-item">
+          <div class="number" id="days">00</div>
+          <div class="label">Hari</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number" id="hours">00</div>
+          <div class="label">Jam</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number" id="minutes">00</div>
+          <div class="label">Menit</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number" id="seconds">00</div>
+          <div class="label">Detik</div>
+        </div>
+      </div>
+      <div class="message">
+        Nantikan Bazar Online Ramadhan di Belantar 🌙 ✨
+      </div>
+    </div>
+  </div>      
+  
+  <!-- Produk -->
+  <section class="grid-container" id="craft">
+    <div class="craft__image">
+      <div class="craft__image__content">
+        <img src="/img/foods.png" alt="craft" />
+        <p>dyDimsum</p>
+        <h4>Rp25.000</h4>
+      </div>
+      <a href="#" class="add-button"><i class="ri-add-line"></i></a>
+    </div>
+
+    <div class="craft__image">
+      <div class="craft__image__content">
+        <img src="/img/sweater.png" alt="craft" />
+        <p>Sweater</p>
+        <h4>Rp100.000</h4>
+      </div>
+      <a href="#" class="add-button"><i class="ri-add-line"></i></a>
+    </div>
+
+    <div class="craft__image">
+      <div class="craft__image__content">
+        <img src="/img/foods2.png" alt="craft" />
+        <p>Bakso Pedas</p>
+        <h4>Rp16.000</h4>
+      </div>
+      <a href="#" class="add-button"><i class="ri-add-line"></i> Tambah</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p>&copy; 2025 Belantar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/marketplace.js"></script>
+</body>
+</html>

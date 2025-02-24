@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Belantar Store</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__logo"><a href="#">Belantar</a></div>
+        <ul class="nav__links" id="nav-links">
+          <li class="link"><a href="#home">Home</a></li>
+          <li class="link"><a href="#choose">About</a></li>
+          <li class="link"><a href="marketplace.html">Product</a></li>
+          <li class="link"><a href="#testimonial">Testimonials</a></li>
+          <li class="link"><a href="#blog">Blog</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </nav>
+      <div class="countdown-wrapper">
+        <div id="vanta"></div>
+        <div class="countdown-container">
+          <div class="moon"></div>
+          <h1 class="title">Ramadhan Countdown</h1>
+          <div class="countdown">
+            <div class="countdown-item">
+              <div class="number" id="days">00</div>
+              <div class="label">Hari</div>
+            </div>
+            <div class="countdown-item">
+              <div class="number" id="hours">00</div>
+              <div class="label">Jam</div>
+            </div>
+            <div class="countdown-item">
+              <div class="number" id="minutes">00</div>
+              <div class="label">Menit</div>
+            </div>
+            <div class="countdown-item">
+              <div class="number" id="seconds">00</div>
+              <div class="label">Detik</div>
+            </div>
+          </div>
+          <div class="message">
+            Ramadhan akan tiba, insyaAllah 01 Maret 2025 🌙 ✨
+          </div>
+        </div>
+      </div>      
+      <div class="section__container header__container" id="home">
+        <h1>Jadilah bagian dari gerakan #BelanjaAntar dan tumbuh bersama!</h1>
+        <p>
+          Belantar merupakan platform digital yang lahir dari semangat kewirausahaan. 
+          Kami hadir untuk membantu calon wirausaha merintis usaha dengan mudah, 
+          bermitra langsung dengan UMKM terpercaya melalui sistem maklun di Babari.id.
+        </p>
+        <form action="/">
+          <input type="text" placeholder="Search product" />
+          <button><i class="ri-search-line"></i></button>
+        </form>
+        <a href="#choose"><i class="ri-arrow-down-double-line"></i></a>
+      </div>
+    </header>
+
+    <section class="section__container choose__container" id="choose">
+      <img class="choose__bg" src="/img/dot-bg.png" alt="bg" />
+      <div class="choose__content">
+        <h2 class="section__header">Kenapa pilih Belantar</h2>
+        <p class="section__subheader">
+          Belantar hadir sebagai solusi cerdas untuk mewujudkan impian bisnismu!
+        </p>
+        <div class="choose__grid">
+          <div class="choose__card">
+            <span>🌟</span>
+            <h4>Mitra UMKM Terpercaya</h4>
+            <p>
+              Terhubung langsung dengan UMKM berkualitas yang siap mendukung produksi bisnismu melalui sistem maklun yang ada 
+              di Babari.id.
+            </p>
+          </div>
+          <div class="choose__card">
+            <span>💡</span>
+            <h4>Dari Ide ke Produk Nyata</h4>
+            <p>
+              Punya ide bisnis? Kami bantu realisasikan dengan proses yang mudah, cepat, dan efisien.
+            </p>
+          </div>
+          <div class="choose__card">
+            <span>🤝</span>
+            <h4>Kolaborasi Tanpa Ribet</h4>
+            <p>
+              Belantar menyederhanakan proses kerja sama antara wirausaha dan UMKM, 
+              sehingga kamu bisa fokus mengembangkan bisnismu.
+            </p>
+          </div>
+          <div class="choose__card">
+            <span>🚀</span>
+            <h4>Dukungan Penuh Kewirausahaan</h4>
+            <p>
+              Kami lahir dari semangat kewirausahaan, siap menjadi partner yang selalu mendukung langkah bisnismu ke depan.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="choose__image">
+        <img src="/img/choose1.jpg" alt="choose" />
+      </div>
+    </section>
+
+    <section class="offer__container" id="offer">
+      <div class="offer__grid__top">
+        <img src="/img/offers2.jpeg" alt="offer" />
+        <img src="/img/offers3.jpg" alt="offer" />
+        <img src="/img/offers.jpeg" alt="offer" />
+        <div class="offer__content">
+          <h2 class="section__header">Produk</h2>
+          <p class="section__subheader">
+            Temukan penawaran menarik di Belantar dengan beragam pilihan produk Anda!
+          </p>
+          <button class="btn">Cari Produk Anda</button>
+        </div>
+      </div>
+      <div class="offer__grid__bottom">
+        <img src="/img/offers5.jpeg" alt="offer" />
+        <img src="/img/offers6.jpeg" alt="offer" />
+        <img src="/img/offers7.jpeg" alt="offer" />
+        <img src="/img/offers8.jpeg" alt="offer" />
+      </div>
+    </section>
+
+    <section class="section__container craft__container" id="craft">
+      <div class="craft__content">
+        <h2 class="section__header">Cari produk Anda</h2>
+        <button class="btn">Cari Produk Anda</button>
+      </div>
+      <div class="craft__image">
+        <div class="craft__image__content">
+          <img src="/img/foods.png" alt="craft" />
+          <p>dyDimsum</p>
+          <h4>Rp25.000</h4>
+        </div>
+        <a href="#"><i class="ri-add-line"></i></a>
+      </div>
+      <div class="craft__image">
+        <div class="craft__image__content">
+          <img src="/img/foods2.png" alt="craft" />
+          <p>Bakso Pedas</p>
+          <h4>Rp10.000</h4>
+        </div>
+        <a href="#"><i class="ri-add-line"></i></a>
+      </div>
+      <div class="craft__image">
+        <div class="craft__image__content">
+          <img src="/img/sweater.png" alt="craft" />
+          <p>Sweater</p>
+          <h4>Rp115.000</h4>
+        </div>
+        <a href="#"><i class="ri-add-line"></i></a>
+      </div>
+    </section>
+    <section class="section__container modern__container" id="modern">
+      <div class="modern__image">
+        <img src="/img/dot-bg.png" alt="bg" class="modern__bg" />
+        <img src="/img/choose1.jpeg" alt="modern" class="modern__img-1" />
+        <img src="/img/offers1.jpeg" alt="modern" class="modern__img-2" />
+        <img src="/img/choose3.jpeg" alt="modern" class="modern__img-3" />
+      </div>
+      <div class="modern__content">
+        <h2 class="section__header">
+          Bersama Belantar, wujudkan ide bisnismu dengan produk-produk berkualitas dari UMKM Indonesia!
+        </h2>
+        <p class="section__subheader">
+          Belantar bukan sekadar platform, tapi solusi lengkap untuk kebutuhan bisnismu! Ini alasannya.
+        </p>
+        <div class="modern__grid">
+          <div class="modern__card">
+            <span><i class="ri-checkbox-blank-circle-line"></i></span>
+            <p>
+              Temukan berbagai pilihan produk, mulai dari makanan siap saji, fashion, kerajinan tangan, 
+              hingga kebutuhan harian, semua dari UMKM terpercaya.
+            </p>
+          </div>
+          <div class="modern__card">
+            <span><i class="ri-checkbox-blank-circle-line"></i></span>
+            <p>
+              Butuh produk jadi atau ingin produksi dengan brand sendiri? 
+              Belantar siap memenuhi kebutuhan bisnismu dengan sistem maklun yang fleksibel.
+            </p>
+          </div>
+          <div class="modern__card">
+            <span><i class="ri-checkbox-blank-circle-line"></i></span>
+            <p>
+              Dapatkan produk dengan harga terbaik langsung dari mitra UMKM, 
+              tanpa perantara, sehingga margin keuntungan bisnismu lebih besar.
+            </p>
+          </div>
+          <div class="modern__card">
+            <span><i class="ri-checkbox-blank-circle-line"></i></span>
+            <p>
+              Produk yang dipilih bisa langsung dikirim ke tempatmu atau langsung ke pelanggan, praktis dan efisien.
+            </p>
+          </div>
+        </div>
+        <button class="btn">Cari Produk Anda</button>
+      </div>
+    </section>
+    <div class="order-form-container">
+      <form class="order__form">
+          <button type="button" class="order__close">X</button>
+          <h2 class="order__title">Form Pemesanan</h2>
+  
+          <div class="order__group">
+            <label for="name" class="order__label">Nama Pemesan</label>
+            <input type="text" id="name" class="order__input" placeholder="Masukkan nama Anda">
+            <span class="error-message" id="name-error"></span> <!-- Error untuk nama -->
+          </div>
+        
+          <div class="order__group">
+              <label for="address" class="order__label">Alamat</label>
+              <input type="text" id="address" class="order__input" placeholder="Masukkan alamat Anda">
+              <span class="error-message" id="address-error"></span> <!-- Error untuk alamat -->
+          </div>
+  
+          <div class="order__group">
+              <label class="order__label">Pesanan</label>
+              <p id="selected-product" class="order__selected"></p>
+              <p id="selected-price" class="order__price"></p>
+          </div>
+  
+          <div class="order__group">
+              <label class="order__label">Jumlah</label>
+              <div class="order__quantity">
+                  <button type="button" id="decrease" class="order__button">-</button>
+                  <span id="quantity">1</span>
+                  <button type="button" id="increase" class="order__button">+</button>
+              </div>
+          </div>
+          <button type="button" id="submitOrder" class="order__button">Pesan via WhatsApp</button>
+      </form>
+    </div>
+    <section class="section__container testimonial__container" id="testimonial">
+      <h2 class="section__header">Testimonials</h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="testimonial__card">
+              <p>
+                Bagus
+              </p>
+              <img src="/img/profile-pic-1.jpg" alt="testimonial" />
+              <h4>Iqbal</h4>
+              <h5>Pejuang</h5>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__card">
+              <p>
+                Baik.
+              </p>
+              <img src="/img/profile-pic-2.jpg" alt="testimonial" />
+              <h4>Jajang</h4>
+              <h5>Pendekar</h5>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__card">
+              <p>
+                Menarik
+              </p>
+              <img src="/img/profile-pic-3.jpg" alt="testimonial" />
+              <h4>Kar'em</h4>
+              <h5>Pemadam</h5>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__card">
+              <p>
+                Ohh
+              </p>
+              <img src="/img/profile-pic-4.jpg" alt="testimonial" />
+              <h4>Joko</h4>
+              <h5>Businessman</h5>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="section__container blog_container" id="blog">
+      <h2 class="section__header">Recent Blog</h2>
+      <div class="blog__grid">
+        <div class="blog__card">
+          <img src="/img/foods.jpg" alt="blog" />
+          <h4>dyDimsum</h4>
+          <p><span>by</span> Cindyy <span>pada</span> Jan 08, 2025</p>
+        </div>
+        <div class="blog__card">
+          <img src="/img/blog-2.jpg" alt="blog" />
+          <h4>YesIcePlease</h4>
+          <p>
+            <span>by</span> Kar'em <span>pada</span> Jan 07, 2025</p>
+        </div>
+        <div class="blog__card">
+          <img src="/img/blog-3.jpg" alt="blog" />
+          <h4>El Mun</h4>
+          <p><span>by</span> Jajang <span>pada</span> Des 25, 2024</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__bar">
+        <div class="footer__logo">
+          <h4><a href="#">Pasar Ramadhan</a></h4>
+          <p>Copyright © 2025 by PasarRamadhan. All rights reserved.</p>
+        </div>
+        <ul class="footer__nav">
+          <li class="footer__link"><a href="#">About</a></li>
+          <li class="footer__link"><a href="#">Partnership</a></li>
+          <li class="footer__link"><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
