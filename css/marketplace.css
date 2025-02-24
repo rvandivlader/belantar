@@ -1,4 +1,11 @@
-/* General */
+:root {
+  --primary-color: #2f2f2f;
+  --text-dark: #18181b;
+  --text-light: #71717a;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Lora", serif;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
