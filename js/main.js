@@ -239,3 +239,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Event listener untuk tombol close
   closeButton.addEventListener('click', closeForm);
 });
+
+document.querySelectorAll(".btn").forEach(button => {
+  button.addEventListener("click", () => {
+    window.location.href = "marketplace.html"; // Ganti 'link-anda.html' dengan URL tujuan
+  });
+}); 
