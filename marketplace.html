@@ -91,7 +91,40 @@
       <a href="#" class="add-button"><i class="ri-add-line"></i></a>
     </div>
   </section>
-
+  <div class="order-form-container">
+      <form class="order__form">
+          <button type="button" class="order__close">X</button>
+          <h2 class="order__title">Form Pemesanan</h2>
+  
+          <div class="order__group">
+            <label for="name" class="order__label">Nama Pemesan</label>
+            <input type="text" id="name" class="order__input" placeholder="Masukkan nama Anda">
+            <span class="error-message" id="name-error"></span> <!-- Error untuk nama -->
+          </div>
+        
+          <div class="order__group">
+              <label for="address" class="order__label">Alamat</label>
+              <input type="text" id="address" class="order__input" placeholder="Masukkan alamat Anda">
+              <span class="error-message" id="address-error"></span> <!-- Error untuk alamat -->
+          </div>
+  
+          <div class="order__group">
+              <label class="order__label">Pesanan</label>
+              <p id="selected-product" class="order__selected"></p>
+              <p id="selected-price" class="order__price"></p>
+          </div>
+  
+          <div class="order__group">
+              <label class="order__label">Jumlah</label>
+              <div class="order__quantity">
+                  <button type="button" id="decrease" class="order__button">-</button>
+                  <span id="quantity">1</span>
+                  <button type="button" id="increase" class="order__button">+</button>
+              </div>
+          </div>
+          <button type="button" id="submitOrder" class="order__button">Pesan via WhatsApp</button>
+      </form>
+    </div>
   <!-- Footer -->
   <footer class="footer">
     <div class="footer__content">
