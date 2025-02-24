@@ -85,3 +85,148 @@ function updateCountdown() {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const addButtons = document.querySelectorAll('.craft__image a');
+  const orderFormContainer = document.querySelector('.order-form-container');
+  const selectedProduct = document.getElementById('selected-product');
+  const selectedPrice = document.getElementById('selected-price');
+  const decreaseBtn = document.getElementById('decrease');
+  const increaseBtn = document.getElementById('increase');
+  const quantitySpan = document.getElementById('quantity');
+  const submitOrder = document.getElementById('submitOrder');
+  const closeButton = document.querySelector('.order__close');
+
+  let quantity = 1;
+  let basePrice = 0;
+
+  // Event listener untuk tombol tambah pesanan
+  addButtons.forEach(button => {
+      button.addEventListener('click', (event) => {
+          event.preventDefault(); // Mencegah link default
+
+          // Temukan elemen produk yang diklik
+          const item = button.closest('.craft__image');
+          const itemName = item.querySelector('p').textContent;
+          const itemPrice = item.querySelector('h4').textContent.replace('Rp', '').replace('.', '').trim();
+
+          // Ubah harga ke dalam bentuk angka
+          basePrice = parseInt(itemPrice, 10);
+
+          // Isi form dengan data produk
+          selectedProduct.textContent = itemName;
+          updatePrice(); // Update harga berdasarkan jumlah default (1)
+
+          // Reset jumlah pesanan ke 1 setiap kali form muncul
+          quantity = 1;
+          quantitySpan.textContent = quantity;
+
+          // Tampilkan form pemesanan
+          orderFormContainer.classList.add('show-order');
+
+          // Mencegah halaman bergulir
+          document.body.classList.add('no-scroll');
+      });
+  });
+
+  // Fungsi update harga total
+  function updatePrice() {
+      const totalPrice = basePrice * quantity;
+      selectedPrice.textContent = `Rp${totalPrice.toLocaleString('id-ID')}`;
+  }
+
+  // Fungsi mengurangi jumlah pesanan
+  decreaseBtn.addEventListener('click', () => {
+      if (quantity > 1) {
+          quantity--;
+          quantitySpan.textContent = quantity;
+          updatePrice();
+      }
+  });
+
+  // Fungsi menambah jumlah pesanan
+  increaseBtn.addEventListener('click', () => {
+      quantity++;
+      quantitySpan.textContent = quantity;
+      updatePrice();
+  });
+
+  // Fungsi submit pesanan ke WhatsApp
+  submitOrder.addEventListener('click', () => {
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const product = selectedProduct.textContent;
+    const price = selectedPrice.textContent;
+    const total = quantity;
+
+    // Ambil elemen error message
+    const nameError = document.getElementById('name-error');
+    const addressError = document.getElementById('address-error');
+
+    // Reset pesan error sebelum validasi
+    nameError.textContent = "";
+    addressError.textContent = "";
+
+    let isValid = true;
+
+    // Validasi Nama
+    if (name === "") {
+        nameError.textContent = "Nama tidak boleh kosong!";
+        isValid = false;
+    }
+
+    // Validasi Alamat
+    if (address === "") {
+        addressError.textContent = "Alamat tidak boleh kosong!";
+        isValid = false;
+    }
+
+    // Jika ada error, hentikan proses
+    if (!isValid) return;
+
+    // Format pesan WhatsApp berdasarkan form
+    const message = `Halo, saya ingin melakukan pemesanan:\n\n` +
+                    `👤 Nama Pemesan: *${name}*\n` +
+                    `📍 Alamat: *${address}*\n` +
+                    `🍽 Pesanan: *${product}*\n` +
+                    `💰 Harga Total: *${price}*\n` +
+                    `🔢 Jumlah: *${total}*\n\n` +
+                    `Mohon konfirmasi pesanan saya. Terima kasih!`;
+
+    // Nomor WhatsApp tujuan (ganti dengan nomor bisnis Anda)
+    const phoneNumber = "6287784862110"; // Format: 62 untuk Indonesia
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+    // Buka WhatsApp dengan pesan yang telah diformat
+    window.open(whatsappURL, "_blank");
+
+    closeForm(); // Tutup form setelah submit
+  });
+
+  // Fungsi untuk menutup form dan mereset data
+  function closeForm() {
+      // Reset input nama dan alamat
+      document.getElementById('name').value = "";
+      document.getElementById('address').value = "";
+
+      // Reset jumlah ke 1
+      quantity = 1;
+      quantitySpan.textContent = quantity;
+
+      // Reset harga ke harga dasar
+      updatePrice();
+
+      // Hapus pesan error jika ada
+      document.getElementById('name-error').textContent = "";
+      document.getElementById('address-error').textContent = "";
+
+      // Sembunyikan form
+      orderFormContainer.classList.remove('show-order');
+
+      // Kembalikan scroll halaman
+      document.body.classList.remove('no-scroll');
+  }
+
+  // Event listener untuk tombol close
+  closeButton.addEventListener('click', closeForm);
+});
